@@ -99,7 +99,35 @@
             minute.innerHTML = '0 :&nbsp; ';
         }
 
-        
+        const lap = () => {
+            const li = document.createElement("li");
+            const number = document.createElement("span");
+            const timestamp = document.createElement("span");
+
+            li.setAttribute("class", "lap-item");
+            number.setAttribute("class", "number");
+            timestamp.setAttribute("class", "time-stamp");
+
+            number.innerText = `#${++lapItem}`;
+            timestamp.innerHTML = `${minCounter} : ${secCounter} : ${centiCounter}`;
+
+            li.append(number, timestamp);
+            laps.append(li);
+
+            clearButton.classList.remove("hidden");
+        }
+
+        const clearAll = () => {
+            laps.innerHTML = '';
+            laps.append(clearButton);
+            clearButton.classList.add("hidden");
+            lapItem = 0;
+        }
+
+        playButton.addEventListener("click", play);
+        resetButton.addEventListener("click", reset);
+        lapButton.addEventListener("click", lap);
+        clearButton.addEventListener("click", clearAll);
     </script>
 </body>
 </html>
