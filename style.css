@@ -25,3 +25,30 @@ body {
     justify-content: center;
 }
 
+.inner-circle {
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+    color: white;
+    font-size: 23px;
+}
+
+.minute {
+    font-size: 43px;
+}
+
+.sec {
+    font-size: 34px;
+}
+
+.msec {
+    font-size: 23px;
+}
+
