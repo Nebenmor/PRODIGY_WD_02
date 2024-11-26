@@ -52,3 +52,10 @@ body {
     font-size: 23px;
 }
 
+.button-wrapper {
+    width: 250px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
