@@ -74,3 +74,54 @@ button:hover {
     color: black;
 }
 
+.laps {
+    list-style: none;
+    width: 250px;
+    height: 250px;
+    overflow: auto;
+    list-style: none;
+    color: white;
+    position: relative;
+    margin-top: 30px;
+}
+
+.laps::-webkit-scrollbar {
+    display: none;
+}
+
+.lap-item {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #444;
+    border-radius: 50px;
+    margin-bottom: 15px;
+}
+ 
+.number {
+    color: #ccc;
+}
+
+.time-stamp {
+    display: inline-block;
+    margin-left: 25px;
+}
+
+.lap-clear-button {
+    display: block;
+    position: fixed;
+    z-index: 1000;
+    bottom: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 130px;
+    padding: 10px 0;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid white;
+}
+
+.display-none {
+    display: none;
+}
