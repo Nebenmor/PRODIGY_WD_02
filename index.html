@@ -56,6 +56,39 @@
             resetButton.classList.remove("hidden");
         }
 
+        const play = () => {
+            if (!isPlay && !isReset) {
+                playButton.innerHTML = 'Pause';
+                bg.classList.add("animation-bg");
+                min = setInterval(() => {
+                    minute.innerHTML = `${++minCounter} :`;
+                }, 60*1000);
+                sec = setInterval(() => {
+                    if (secCounter === 60) {
+                        secCounter = 0;
+                    }
+                    second.innerHTML = `${++secCounter} :`;
+                }, 1000);
+                centiSec = setInterval(() => {
+                    if (centiCounter === 100) {
+                        centiCounter = 0;
+                    }
+                    centiSecond.innerHTML= `&nbsp;${++centiCounter}`;
+                }, 10);
+                isPlay = true;
+                isReset = true;
+            } else {
+                playButton.innerHTML = 'Play';
+                clearInterval(min);
+                clearInterval(sec);
+                clearInterval(centiSec);
+                isPlay = false;
+                isReset = false;
+                bg.classList.remove("animation-bg");
+            }
+            toggleButton();
+        }
+
         
     </script>
 </body>
