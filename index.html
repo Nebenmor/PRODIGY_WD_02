@@ -89,6 +89,16 @@
             toggleButton();
         }
 
+        const reset = () => {
+            isReset = true;
+            play();
+            lapButton.classList.add("hidden");
+            resetButton.classList.add("hidden");
+            second.innerHTML = '&nbsp;0 :'
+            centiSecond.innerHTML = '&nbsp;0';
+            minute.innerHTML = '0 :&nbsp; ';
+        }
+
         
     </script>
 </body>
